@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  margin: 0 1rem;
+  margin-bottom: 4rem;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  border: 1px solid $primary-color;
+  padding: 0.7rem;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-family: $primary-font;
+
+  &::placeholder {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,35 @@
+.accommodations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  .accommodationCard {
+    width: 300px;
+
+    &__item__text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      h2 {
+        margin: 0;
+        margin-top: 0.5rem;
+      }
+    }
+    &__item__price {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    &__item__image {
+      border: 1px solid $primary-color;
+      height: 200px;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

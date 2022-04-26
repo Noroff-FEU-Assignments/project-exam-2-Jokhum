@@ -1,0 +1,21 @@
+.featured {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
+
+  .featuredCard {
+    position: absolute;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__item__title {
+      color: $secondary-color;
+      margin-left: 1rem;
+      text-shadow: 2px 2px 1px #000;
+      position: absolute;
+      top: 0;
+    }
+  }
+}

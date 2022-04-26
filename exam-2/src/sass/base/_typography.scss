@@ -1,0 +1,25 @@
+body {
+  font-family: $primary-font;
+}
+
+h1,
+h2,
+h3 {
+  color: $primary-color;
+  font-family: $heading-font;
+  font-weight: 600;
+  font-style: normal;
+  margin: 1.5rem 0;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+p {
+  color: $gray-color;
+}

@@ -1,0 +1,46 @@
+nav {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  align-items: center;
+
+  .fa-icons {
+    font-size: 26px;
+  }
+
+  svg:hover {
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    top: 80px;
+    left: 0;
+    background-color: $primary-color;
+    gap: 1rem;
+    padding-top: 1rem;
+    height: 100%;
+
+    li {
+      list-style: none;
+      a {
+        font-size: 26px;
+        text-decoration: none;
+        color: $secondary-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
