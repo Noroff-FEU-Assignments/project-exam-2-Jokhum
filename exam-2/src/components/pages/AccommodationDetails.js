@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import api from "../../constants/api";
 import axios from "axios";
 import Modal from "../Modal";
-import { FaBath } from "react-icons/fa";
-import { FaBed } from "react-icons/fa";
+import { FaBath, FaBed } from "react-icons/fa";
 import ImageCarousel from "../ImageCarousel";
 
 export default function AccommodationDetails() {
@@ -73,7 +72,6 @@ export default function AccommodationDetails() {
             {accommodation.attributes.bathroom === true ? <FaBath className="details__facilities__icons" /> : <p className="details__facilities__bathroom">No bathroom available.</p>}
           </div>
         </div>
-
         <p className="details__price">{accommodation.attributes.price} NOK /night</p>
         <p className="details__description">{accommodation.attributes.description}</p>
         <h3 className="centered enquiry">Book this establishment now:</h3>

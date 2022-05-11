@@ -3,29 +3,29 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 940px;
   min-height: 1000px;
+
+  h1 {
+    align-self: flex-start;
+  }
 
   &__container {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 100%;
     align-self: center;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-
-  &__image {
-    width: 100%;
-    box-shadow: 2px 2px 6px #000;
+    font-size: 14px;
   }
 
   &__price {
-    width: 80%;
+    width: 100%;
     font-size: 18px;
     font-weight: 900;
     color: $primary-color;
     text-align: end;
-    margin: 0 auto;
   }
 
   &__description {
@@ -53,7 +53,7 @@
     }
     svg {
       color: $primary-color;
-      font-size: 20px;
+      font-size: 14px;
     }
   }
 }
