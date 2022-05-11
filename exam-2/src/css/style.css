@@ -788,6 +788,9 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   min-height: 1000px;
 }
@@ -800,7 +803,7 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
+  width: 80%;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-box-pack: justify;
@@ -810,12 +813,6 @@ button:hover {
       flex-wrap: wrap;
 }
 
-@media (min-width: 1000px) {
-  .details__container {
-    width: 80%;
-  }
-}
-
 .details__image {
   width: 100%;
   -webkit-box-shadow: 2px 2px 6px #000;
@@ -823,28 +820,23 @@ button:hover {
 }
 
 .details__price {
+  width: 80%;
   font-size: 18px;
   font-weight: 900;
   color: #00415e;
   text-align: end;
-}
-
-@media (min-width: 1000px) {
-  .details__price {
-    width: 80%;
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 }
 
 .details__description {
   margin: 1rem 0;
-}
-
-@media (min-width: 1000px) {
-  .details__description {
-    width: 80%;
-    margin: 1rem auto;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 940px;
 }
 
 .details__facilites {
@@ -864,6 +856,8 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .details__facilites__bedtype {

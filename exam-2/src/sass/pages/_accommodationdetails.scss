@@ -1,20 +1,17 @@
 .details {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   min-height: 1000px;
 
   &__container {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 80%;
     align-self: center;
     justify-content: space-between;
     flex-wrap: wrap;
-
-    @include larger {
-      width: 80%;
-    }
   }
 
   &__image {
@@ -23,24 +20,19 @@
   }
 
   &__price {
+    width: 80%;
     font-size: 18px;
     font-weight: 900;
     color: $primary-color;
     text-align: end;
-
-    @include larger {
-      width: 80%;
-      margin: 0 auto;
-    }
+    margin: 0 auto;
   }
 
   &__description {
     margin: 1rem 0;
-
-    @include larger {
-      width: 80%;
-      margin: 1rem auto;
-    }
+    display: flex;
+    align-items: center;
+    max-width: 940px;
   }
   &__facilites {
     height: 100%;
@@ -50,6 +42,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
     &__bedtype {
       display: flex;
       align-items: center;
