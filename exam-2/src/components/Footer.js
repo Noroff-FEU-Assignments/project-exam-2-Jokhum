@@ -1,7 +1,5 @@
 import React from "react";
 
-function Footer() {
+export default function Footer() {
   return <footer>Copyright</footer>;
 }
-
-export default Footer;

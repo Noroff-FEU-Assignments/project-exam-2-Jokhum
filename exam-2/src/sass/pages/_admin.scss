@@ -1,0 +1,33 @@
+.adminMenu {
+  display: flex;
+  flex-direction: column;
+
+  &__button {
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+
+  &__message__item {
+    border: 1px solid $primary-color;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  &__message__heading {
+    margin: 0.4rem 0;
+  }
+
+  &__imageUpload {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-top: 1rem;
+      align-self: center;
+    }
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

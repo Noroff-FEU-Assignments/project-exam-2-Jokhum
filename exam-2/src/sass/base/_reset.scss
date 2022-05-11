@@ -4,24 +4,41 @@
   padding: 0;
 }
 
+img {
+  border: 1px solid $primary-color;
+}
+
+.centered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.blue {
+  color: $primary-color;
+}
+
 .wrapper {
   margin: 0 1rem;
   margin-bottom: 4rem;
-}
 
-label {
-  font-size: 20px;
-  margin-bottom: 0.5rem;
-}
-
-input {
-  border: 1px solid $primary-color;
-  padding: 0.7rem;
-  background-color: $primary-color;
-  color: $secondary-color;
-  font-family: $primary-font;
-
-  &::placeholder {
-    opacity: 1;
+  @include larger {
+    margin: 0 20%;
+    margin-bottom: 4rem;
   }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }

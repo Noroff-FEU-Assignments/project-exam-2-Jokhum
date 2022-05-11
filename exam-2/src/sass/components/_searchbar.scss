@@ -1,5 +1,45 @@
-.search-container {
+.search {
   display: flex;
   flex-direction: column;
-  margin: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  max-width: 625px;
+
+  &__list {
+    display: none;
+    border-top: 1px solid $secondary-color;
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 0.7rem;
+
+    a {
+      color: $secondary-color;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__error {
+    display: none;
+    padding: 0.5rem;
+    transition: ease-in 0.6s;
+    background-color: $red-color;
+    color: $secondary-color;
+    text-align: center;
+  }
+
+  .fade-in {
+    display: block;
+    animation: fade-in 1s;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

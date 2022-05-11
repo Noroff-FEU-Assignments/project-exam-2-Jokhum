@@ -1,21 +1,57 @@
+.main__container {
+  height: 400px;
+  max-width: 1800px;
+  margin-bottom: 0.5rem;
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 2px 2px 10px #000;
+  }
+}
+
 .featured {
-  position: relative;
-  max-width: 600px;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @include larger {
+    flex-direction: row;
+  }
 
   .featuredCard {
-    position: absolute;
+    position: relative;
+    max-width: 400px;
+
     img {
+      height: 400px;
       width: 100%;
       object-fit: cover;
+      box-shadow: 2px 2px 10px #000;
     }
 
     &__item__title {
       color: $secondary-color;
-      margin-left: 1rem;
+      margin-left: 1px;
       text-shadow: 2px 2px 1px #000;
       position: absolute;
       top: 0;
+      padding: 0 2rem;
+      background-color: #00405ead;
+    }
+
+    &__item__type {
+      position: absolute;
+      top: 3.2rem;
+      padding: 0 1rem;
+      margin-left: 1px;
+      text-align: start;
+      color: $primary-color;
+      text-shadow: 1px 1px 2px #fff;
+      background-color: rgba(255, 255, 255, 0.858);
     }
   }
 }

@@ -1,3 +1,3 @@
-const api = "https://pwerven-api.herokuapp.com/api/accommodations/?populate=*";
+const api = "https://pwerven-api.herokuapp.com/api/";
 
 export default api;
