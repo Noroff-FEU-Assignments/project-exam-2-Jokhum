@@ -47,7 +47,7 @@ export default function Modal({ closeModal, pageTitle, pageId }) {
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
-      history("/hotels");
+      history("/accommodations");
     }
   }
 

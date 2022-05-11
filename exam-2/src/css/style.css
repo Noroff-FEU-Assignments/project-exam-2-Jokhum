@@ -793,10 +793,27 @@ button:hover {
 }
 
 .details__container {
-  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 1000px) {
+  .details__container {
+    width: 80%;
+  }
 }
 
 .details__image {
@@ -805,36 +822,29 @@ button:hover {
           box-shadow: 2px 2px 6px #000;
 }
 
-.details__subtext {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  font-size: 14px;
-  height: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.details__subtext__price {
+.details__price {
   font-size: 18px;
   font-weight: 900;
   color: #00415e;
   text-align: end;
 }
 
+@media (min-width: 1000px) {
+  .details__price {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .details__description {
   margin: 1rem 0;
-  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .details__description {
+    width: 80%;
+    margin: 1rem auto;
+  }
 }
 
 .details__facilites {
@@ -860,6 +870,9 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .details__facilites p {
@@ -933,7 +946,6 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 600px;
   position: relative;
 }
 
@@ -957,6 +969,12 @@ button:hover {
   -webkit-transition-duration: 2s;
           transition-duration: 2s;
   height: 600px;
+}
+
+@media (min-width: 1000px) {
+  .details__image__carousel .slide.active {
+    max-width: 80%;
+  }
 }
 
 .details__image__carousel .slide.active img {
@@ -986,6 +1004,16 @@ button:hover {
 .details__image__carousel .arrow__right:hover,
 .details__image__carousel .arrow__left:hover {
   cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .details__image__carousel .arrow__right,
+  .details__image__carousel .arrow__left {
+    color: #00415e;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .details__image__carousel .arrow__right {

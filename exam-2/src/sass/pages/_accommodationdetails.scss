@@ -5,8 +5,16 @@
   min-height: 1000px;
 
   &__container {
-    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     align-self: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include larger {
+      width: 80%;
+    }
   }
 
   &__image {
@@ -14,26 +22,25 @@
     box-shadow: 2px 2px 6px #000;
   }
 
-  &__subtext {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-size: 14px;
-    height: 30px;
-    align-items: center;
-  }
-
-  &__subtext__price {
+  &__price {
     font-size: 18px;
     font-weight: 900;
     color: $primary-color;
     text-align: end;
+
+    @include larger {
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 
   &__description {
     margin: 1rem 0;
-    text-align: center;
+
+    @include larger {
+      width: 80%;
+      margin: 1rem auto;
+    }
   }
   &__facilites {
     height: 100%;
@@ -45,6 +52,7 @@
     gap: 1rem;
     &__bedtype {
       display: flex;
+      align-items: center;
     }
 
     p {
