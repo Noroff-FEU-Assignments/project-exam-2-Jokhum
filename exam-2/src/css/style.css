@@ -792,7 +792,6 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 940px;
   min-height: 1000px;
 }
 
@@ -809,7 +808,8 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
+  width: 940px;
+  max-width: 100%;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-box-pack: justify;
@@ -821,7 +821,8 @@ button:hover {
 }
 
 .details__price {
-  width: 100%;
+  width: 940px;
+  max-width: 100%;
   font-size: 18px;
   font-weight: 900;
   color: #00415e;
@@ -922,6 +923,7 @@ button:hover {
 
 .uppercase {
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .details__image__carousel {

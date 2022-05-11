@@ -36,7 +36,6 @@ export default function LoginForm() {
 
     try {
       const response = await axios.post(url, data);
-
       setAuth(response.data);
       history("/admin");
     } catch (error) {

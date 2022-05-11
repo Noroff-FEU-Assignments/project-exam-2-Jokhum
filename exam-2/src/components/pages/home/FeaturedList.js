@@ -35,8 +35,6 @@ function FeaturedList() {
     return <div>Error: An error has occured.</div>;
   }
 
-  console.log(accommodations);
-
   return (
     <>
       {accommodations
