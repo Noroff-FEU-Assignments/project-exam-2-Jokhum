@@ -1020,31 +1020,20 @@ button:hover {
 .details__image__carousel .arrow__left {
   position: absolute;
   top: 50%;
+  height: 50px;
   font-size: 2rem;
   z-index: 99;
-  color: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px #000;
-          box-shadow: 1px 1px 2px #000;
+  color: #00415e;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: #00405ecc;
+  background-color: rgba(255, 255, 255, 0.651);
 }
 
 .details__image__carousel .arrow__right:hover,
 .details__image__carousel .arrow__left:hover {
   cursor: pointer;
-}
-
-@media (min-width: 1000px) {
-  .details__image__carousel .arrow__right,
-  .details__image__carousel .arrow__left {
-    color: #00415e;
-    background-color: transparent;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
 }
 
 .details__image__carousel .arrow__right {

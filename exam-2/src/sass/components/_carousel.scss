@@ -40,21 +40,15 @@
   .arrow__left {
     position: absolute;
     top: 50%;
+    height: 50px;
     font-size: 2rem;
     z-index: 99;
-    color: $secondary-color;
-    box-shadow: 1px 1px 2px #000;
+    color: $primary-color;
     user-select: none;
-    background-color: #00405ecc;
+    background-color: rgba(255, 255, 255, 0.651);
 
     &:hover {
       cursor: pointer;
-    }
-
-    @include larger {
-      color: $primary-color;
-      background-color: transparent;
-      box-shadow: none;
     }
   }
 
