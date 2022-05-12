@@ -40,7 +40,7 @@ function FeaturedList() {
       {accommodations
         .filter((accommodations) => accommodations.attributes.featured === true)
         .map((accommodation) => (
-          <section className="featuredCard" key={accommodation.id}>
+          <article className="featuredCard" key={accommodation.id}>
             <Link to={`accommodations/detail/${accommodation.id}`}>
               {accommodation.attributes.image.data === null ? (
                 <img src={image} alt="Placeholder"></img>
@@ -51,7 +51,7 @@ function FeaturedList() {
               <p className="featuredCard__item__type">{accommodation.attributes.type}</p>
               <p className="featuredCard__item__description>">{accommodation.attributes.short_description}</p>
             </Link>
-          </section>
+          </article>
         ))}
     </>
   );

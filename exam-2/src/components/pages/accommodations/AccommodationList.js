@@ -37,7 +37,7 @@ export default function AccommodationList() {
   return (
     <>
       {accommodations.map((accommodation) => (
-        <div className="accommodationCard" key={accommodation.id}>
+        <article className="accommodationCard" key={accommodation.id}>
           <Link to={`detail/${accommodation.id}`}>
             <div className="accommodationCard__item">
               <div className="accommodationCard__item__image">
@@ -48,15 +48,17 @@ export default function AccommodationList() {
                 )}
               </div>
               <div className="accommodationCard__item__text">
-                <h2>{accommodation.attributes.name}</h2>
+                <h2>
+                  {accommodation.attributes.name} {accommodation.attributes.type}
+                </h2>
                 <p>{accommodation.attributes.location}</p>
                 <p className="accommodationCard__item__price">
-                  <span className="blue">{accommodation.attributes.price} NOK</span>
+                  <span className="blue">from {accommodation.attributes.price} NOK</span>
                 </p>
               </div>
             </div>
           </Link>
-        </div>
+        </article>
       ))}
     </>
   );

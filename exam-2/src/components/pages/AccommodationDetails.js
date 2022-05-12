@@ -72,7 +72,7 @@ export default function AccommodationDetails() {
             {accommodation.attributes.bathroom === true ? <FaBath className="details__facilities__icons" /> : <p className="details__facilities__bathroom">No bathroom available.</p>}
           </div>
         </div>
-        <p className="details__price">{accommodation.attributes.price} NOK /night</p>
+        <p className="details__price">from {accommodation.attributes.price} NOK</p>
         <p className="details__description">{accommodation.attributes.description}</p>
         <h3 className="centered enquiry">Book this establishment now:</h3>
         <div className="centered">

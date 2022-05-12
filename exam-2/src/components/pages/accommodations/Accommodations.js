@@ -24,8 +24,7 @@ export default function Accommodations() {
     <>
       <Heading title="Accommodations" />
       <div className="search">
-        <label htmlFor="search-bar">Search for accommodation:</label>
-        <input type="text" placeholder="Accommodation name here..." onChange={(e) => setSearch(e.target.value)} />
+        <input type="text" placeholder="Search for establishment..." onChange={(e) => setSearch(e.target.value)} />
         <ul className="search__list">
           {search.length > 0 && filteredAccommodations.length > 0
             ? filteredAccommodations.map((accommodation) => {
@@ -53,9 +52,9 @@ export default function Accommodations() {
           <div className="search__error">No accommodations matches your search!</div>
         </ul>
       </div>
-      <div className="accommodations">
+      <section className="accommodations">
         <AccommodationList />
-      </div>
+      </section>
     </>
   );
 }

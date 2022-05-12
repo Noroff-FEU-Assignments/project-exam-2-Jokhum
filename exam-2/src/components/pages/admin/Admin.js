@@ -18,7 +18,7 @@ export default function Admin() {
   return (
     <>
       <Heading title={"Welcome, " + username + "!"} />
-      <div className="adminMenu">
+      <section className="adminMenu">
         <div className="adminMenu__messages">
           <EnquiriesList />
           <MessagesList />
@@ -44,7 +44,7 @@ export default function Admin() {
           </button>
         )}
         {showUpload ? <UploadImage /> : null}
-      </div>
+      </section>
     </>
   );
 }

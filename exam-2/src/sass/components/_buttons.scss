@@ -36,3 +36,25 @@ button {
     }
   }
 }
+
+.back__up__container {
+  position: fixed;
+  width: 60px;
+  right: 1rem;
+  bottom: 55px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 64, 94, 0.705);
+  border-radius: 5px;
+
+  #back__top {
+    margin: 0 1rem;
+    font-size: 25px;
+    color: $secondary-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

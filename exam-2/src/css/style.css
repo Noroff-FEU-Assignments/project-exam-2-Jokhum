@@ -42,7 +42,7 @@ img {
 
 .wrapper {
   margin: 0 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 
 @media (min-width: 1000px) {
@@ -312,6 +312,9 @@ p {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 1.5rem;
 }
 
@@ -335,9 +338,9 @@ p {
 }
 
 .accommodations .accommodationCard__item__price {
-  font-weight: 700;
   font-size: 16px;
   margin-top: 0.5rem;
+  font-weight: 200;
 }
 
 .accommodations .accommodationCard__item__image {
@@ -368,7 +371,7 @@ p {
 .main__container {
   height: 400px;
   max-width: 1800px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .main__container__image {
@@ -388,7 +391,10 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.5rem;
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -778,6 +784,35 @@ button:hover {
   .logOutButton:hover {
     border-radius: 5px;
   }
+}
+
+.back__up__container {
+  position: fixed;
+  width: 60px;
+  right: 1rem;
+  bottom: 55px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 64, 94, 0.705);
+  border-radius: 5px;
+}
+
+.back__up__container #back__top {
+  margin: 0 1rem;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.back__up__container #back__top:hover {
+  cursor: pointer;
 }
 
 .details {
