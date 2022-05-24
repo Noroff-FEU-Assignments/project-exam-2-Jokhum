@@ -8,24 +8,24 @@ img {
   border: 1px solid $primary-color;
 }
 
-.centered {
+.Centered {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.column {
+.Column {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
 }
 
-.blue {
+.Blue {
   color: $primary-color;
 }
 
-.wrapper {
+.Wrapper {
   margin: 0 1rem;
   margin-bottom: 8rem;
 

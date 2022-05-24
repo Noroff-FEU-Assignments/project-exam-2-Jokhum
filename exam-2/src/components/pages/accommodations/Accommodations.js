@@ -23,14 +23,14 @@ export default function Accommodations() {
   return (
     <>
       <Heading title="Accommodations" />
-      <div className="search">
+      <div className="Search">
         <input type="text" placeholder="Search for establishment..." onChange={(e) => setSearch(e.target.value)} />
-        <ul className="search__list">
+        <ul className="Search__List">
           {search.length > 0 && filteredAccommodations.length > 0
             ? filteredAccommodations.map((accommodation) => {
-                const visibleList = document.querySelector(".search__list");
-                const error = document.querySelector(".search__error");
-                error.classList.remove("fade-in");
+                const visibleList = document.querySelector(".Search__List");
+                const error = document.querySelector(".Search__Error");
+                error.classList.remove("FadeIn");
                 visibleList.style.display = "block";
                 return (
                   <li key={accommodation.id}>
@@ -40,19 +40,19 @@ export default function Accommodations() {
               })
             : accommodationData.map((accommodation) => {
                 if (search.length > 0 && filteredAccommodations.length === 0) {
-                  const error = document.querySelector(".search__error");
-                  error.classList.add("fade-in");
+                  const error = document.querySelector(".Search__Error");
+                  error.classList.add("FadeIn");
                   return null;
                 } else {
-                  const visibleList = document.querySelector(".search__list");
+                  const visibleList = document.querySelector(".Search__List");
                   visibleList.style.display = "none";
                   return null;
                 }
               })}
-          <div className="search__error">No accommodations matches your search!</div>
+          <div className="Search__Error">No accommodations matches your search!</div>
         </ul>
       </div>
-      <section className="accommodations">
+      <section className="Accommodations">
         <AccommodationList />
       </section>
     </>

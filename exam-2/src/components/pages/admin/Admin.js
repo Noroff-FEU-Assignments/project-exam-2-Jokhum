@@ -18,28 +18,28 @@ export default function Admin() {
   return (
     <>
       <Heading title={"Welcome, " + username + "!"} />
-      <section className="adminMenu">
-        <div className="adminMenu__messages">
+      <section className="AdminMenu">
+        <div className="AdminMenu__Messages">
           <EnquiriesList />
           <MessagesList />
         </div>
         {showForm ? (
-          <button className="adminMenu__button" onClick={onClick}>
+          <button className="AdminMenu__Button" onClick={onClick}>
             X
           </button>
         ) : (
-          <button className="adminMenu__button" onClick={onClick}>
+          <button className="AdminMenu__Button" onClick={onClick}>
             Add Establishment
           </button>
         )}
         {showForm ? <AddEstablishment /> : null}
 
         {showUpload ? (
-          <button className="adminMenu__button" onClick={onPress}>
+          <button className="AdminMenu__Button" onClick={onPress}>
             X
           </button>
         ) : (
-          <button className="adminMenu__button" onClick={onPress}>
+          <button className="AdminMenu__Button" onClick={onPress}>
             Upload Image
           </button>
         )}

@@ -55,33 +55,33 @@ export default function ContactForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="contactForm">
-        <div className="contactForm__item">
+      <form onSubmit={handleSubmit(onSubmit)} className="ContactForm">
+        <div className="ContactForm__Item">
           <label htmlFor="name">Full Name:</label>
           <input {...register("name")} placeholder="Your name here..." />
-          {errors.name && <span className="error">{errors.name.message}</span>}
+          {errors.name && <span className="Error">{errors.name.message}</span>}
         </div>
 
-        <div className="contactForm__item">
+        <div className="ContactForm__Item">
           <label htmlFor="email">E-mail:</label>
           <input {...register("email")} placeholder="Your mail address here..." />
-          {errors.email && <span className="error">{errors.email.message}</span>}
+          {errors.email && <span className="Error">{errors.email.message}</span>}
         </div>
 
-        <div className="contactForm__item">
+        <div className="ContactForm__Item">
           <label htmlFor="subject">Subject:</label>
           <input {...register("subject")} placeholder="Your subject here..." />
-          {errors.subject && <span className="error">{errors.subject.message}</span>}
+          {errors.subject && <span className="Error">{errors.subject.message}</span>}
         </div>
-        <div className="contactForm__item">
+        <div className="ContactForm__Item">
           <label htmlFor="message">Message:</label>
           <textarea {...register("message")} placeholder="Your message here..." />
-          {errors.message && <span className="error">{errors.message.message}</span>}
+          {errors.message && <span className="Error">{errors.message.message}</span>}
         </div>
         {serverError && <span className="error">{serverError}</span>}
-        {success ? <span className="success">Your message has been sent!</span> : null}
-        <div className="centered">
-          <button className="contactForm__button">{submitting ? "Sending message..." : "Send"}</button>
+        {success ? <span className="Success">Your message has been sent!</span> : null}
+        <div className="Centered">
+          <button>{submitting ? "Sending message..." : "Send"}</button>
         </div>
       </form>
     </>

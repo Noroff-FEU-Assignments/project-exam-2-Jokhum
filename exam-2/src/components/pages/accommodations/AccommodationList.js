@@ -28,7 +28,7 @@ export default function AccommodationList() {
     fetchData();
   }, []);
   if (loading) {
-    return <div className="loader"></div>;
+    return <div className="Loader"></div>;
   }
   if (error) {
     return <div>Error: An error has occured.</div>;
@@ -37,23 +37,23 @@ export default function AccommodationList() {
   return (
     <>
       {accommodations.map((accommodation) => (
-        <article className="accommodationCard" key={accommodation.id}>
+        <article className="AccommodationCard" key={accommodation.id}>
           <Link to={`detail/${accommodation.id}`}>
-            <div className="accommodationCard__item">
-              <div className="accommodationCard__item__image">
+            <div className="AccommodationCard__Item">
+              <div className="AccommodationCard__Item__Image">
                 {accommodation.attributes.image.data === null ? (
                   <img src={placeholderImage} alt="Placeholder"></img>
                 ) : (
                   <img src={accommodation.attributes.image.data[0].attributes.url} alt={accommodation.attributes.image.data[0].attributes.alternativeText}></img>
                 )}
               </div>
-              <div className="accommodationCard__item__text">
+              <div className="AccommodationCard__Item__Text">
                 <h2>
                   {accommodation.attributes.name} {accommodation.attributes.type}
                 </h2>
                 <p>{accommodation.attributes.location}</p>
-                <p className="accommodationCard__item__price">
-                  <span className="blue">from {accommodation.attributes.price} NOK</span>
+                <p className="AccommodationCard__Item__Price">
+                  <span className="Blue">from {accommodation.attributes.price} NOK</span>
                 </p>
               </div>
             </div>

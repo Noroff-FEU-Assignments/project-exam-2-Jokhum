@@ -30,16 +30,16 @@ export default function MessagesList() {
     <>
       {showMessage ? (
         <>
-          <button className="adminMenu__button" onClick={onClick}>
+          <button className="AdminMenu__Button" onClick={onClick}>
             Close Messages
           </button>
-          <ul className="adminMenu__message__list">
+          <ul className="AdminMenu__Message__List">
             {messages.map((message) => {
               return (
-                <li key={message.id} className="adminMenu__message__item">
+                <li key={message.id} className="AdminMenu__Message__Item">
                   <>
-                    <h3 className="adminMenu__message__heading">
-                      <span className="uppercase">"{message.attributes.subject}"</span> from <span className="uppercase">{message.attributes.name}</span> -{" "}
+                    <h3 className="AdminMenu__Message__Heading">
+                      <span className="Uppercase">"{message.attributes.subject}"</span> from <span className="Uppercase">{message.attributes.name}</span> -{" "}
                       <a href="mailto: {message.attributes.email}">Reply</a>
                     </h3>
 
@@ -51,7 +51,7 @@ export default function MessagesList() {
           </ul>
         </>
       ) : (
-        <button className="adminMenu__button" onClick={onClick}>
+        <button className="AdminMenu__Button" onClick={onClick}>
           Show Messages
         </button>
       )}

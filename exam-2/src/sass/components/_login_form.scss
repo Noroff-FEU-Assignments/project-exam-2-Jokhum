@@ -1,0 +1,19 @@
+.LoginForm {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 2px solid $primary-color;
+  padding: 1rem;
+
+  &__Title {
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__Item {
+    display: flex;
+    flex-direction: column;
+  }
+}

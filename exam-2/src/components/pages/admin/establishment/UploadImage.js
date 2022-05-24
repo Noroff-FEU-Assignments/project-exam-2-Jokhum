@@ -24,10 +24,10 @@ export default function UploadImage() {
   };
   return (
     <>
-      <div className="adminMenu__imageUpload">
+      <div className="AdminMenu__ImageUpload">
         <label htmlFor="file">Select your image and submit:</label>
         <input type="file" onChange={(e) => setFiles(e.target.files)}></input>
-        {success ? <span className="success">Image has been uploaded!</span> : null}
+        {success ? <span className="Success">Image has been uploaded!</span> : null}
         <button onClick={submitImage}>{submitting ? "Uploading Image" : "Upload"}</button>
       </div>
     </>

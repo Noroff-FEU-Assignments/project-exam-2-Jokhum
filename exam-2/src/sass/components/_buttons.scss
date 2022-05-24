@@ -14,7 +14,7 @@ button {
   }
 }
 
-.logOutButton {
+.LogOutButton {
   height: auto;
   color: $secondary-color;
   background-color: transparent;
@@ -37,7 +37,7 @@ button {
   }
 }
 
-.back__up__container {
+.Back__Up__Container {
   position: fixed;
   width: 60px;
   right: 1rem;
@@ -49,7 +49,7 @@ button {
   background-color: rgba(0, 64, 94, 0.705);
   border-radius: 5px;
 
-  #back__top {
+  #Back__Top {
     margin: 0 1rem;
     font-size: 25px;
     color: $secondary-color;

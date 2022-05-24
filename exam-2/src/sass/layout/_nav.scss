@@ -1,4 +1,4 @@
-.navbar {
+.NavBar {
   background-color: $primary-color;
   height: 80px;
   display: flex;
@@ -6,13 +6,14 @@
   align-items: center;
   font-size: 1.2rem;
   padding: 0 1rem;
+  z-index: 3;
 
   @include larger {
     padding: 0 20%;
   }
 
-  .nav__burger,
-  .nav__logo {
+  .Nav__Burger,
+  .Nav__Logo {
     height: 100%;
     display: flex;
     align-items: center;
@@ -28,7 +29,7 @@
   }
 }
 
-.nav__list {
+.Nav__List {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -47,15 +48,15 @@
     justify-content: center;
     align-items: flex-start;
   }
-  &.active {
+  &.Active {
     background: $primary-color;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 99;
   }
 
-  &__item {
+  &__Item {
     display: flex;
     align-items: center;
     height: 80px;
@@ -67,7 +68,7 @@
     }
   }
 
-  &__link {
+  &__Link {
     font-family: $heading-font;
     text-shadow: 1px 1px 2px $gray-color;
     letter-spacing: 0.2rem;
@@ -79,7 +80,7 @@
     color: #fff;
     font-size: 24px;
 
-    &.active {
+    &.Active {
       color: $primary-color;
       background-color: $secondary-color;
       padding: 1rem;

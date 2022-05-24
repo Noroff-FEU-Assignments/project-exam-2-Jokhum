@@ -29,7 +29,7 @@ function FeaturedList() {
     fetchData();
   }, []);
   if (loading) {
-    return <div className="loader"></div>;
+    return <div className="Loader"></div>;
   }
   if (error) {
     return <div>Error: An error has occured.</div>;
@@ -40,16 +40,16 @@ function FeaturedList() {
       {accommodations
         .filter((accommodations) => accommodations.attributes.featured === true)
         .map((accommodation) => (
-          <article className="featuredCard" key={accommodation.id}>
+          <article className="FeaturedCard" key={accommodation.id}>
             <Link to={`accommodations/detail/${accommodation.id}`}>
               {accommodation.attributes.image.data === null ? (
                 <img src={image} alt="Placeholder"></img>
               ) : (
                 <img src={accommodation.attributes.image.data[0].attributes.url} alt={accommodation.attributes.image.data[0].attributes.alternativeText}></img>
               )}
-              <h2 className="featuredCard__item__title">{accommodation.attributes.name}</h2>
-              <p className="featuredCard__item__type">{accommodation.attributes.type}</p>
-              <p className="featuredCard__item__description>">{accommodation.attributes.short_description}</p>
+              <h2 className="FeaturedCard__Item__Title">{accommodation.attributes.name}</h2>
+              <p className="FeaturedCard__Item__Type">{accommodation.attributes.type}</p>
+              <p className="FeaturedCard__Item__Description>">{accommodation.attributes.short_description}</p>
             </Link>
           </article>
         ))}

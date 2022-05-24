@@ -19,45 +19,45 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="nav__burger" onClick={handleClick}>
+    <nav className="NavBar">
+      <div className="Nav__Burger" onClick={handleClick}>
         {isActive ? <MdClose color="white" /> : <MdMenu color="white" />}
       </div>
-      <div className="nav__logo">
+      <div className="Nav__Logo">
         <NavLink to="/">
-          <img src={logo} alt="Website logo" className="navbar__logo" />
+          <img src={logo} alt="Website logo" className="Navbar__Logo" />
         </NavLink>
       </div>
-      <ul className={isActive ? "nav__list active" : "nav__list"}>
-        <li className="nav__list__item">
-          <NavLink to="/" className="nav__list__link" onClick={closeMenu}>
+      <ul className={isActive ? "Nav__List Active" : "Nav__List"}>
+        <li className="Nav__List__Item">
+          <NavLink to="/" className="Nav__List__Link" onClick={closeMenu}>
             Home
           </NavLink>
         </li>
-        <li className="nav__list__item">
-          <NavLink to="/accommodations" className="nav__list__link" onClick={closeMenu}>
+        <li className="Nav__List__Item">
+          <NavLink to="/accommodations" className="Nav__List__Link" onClick={closeMenu}>
             Accommodations
           </NavLink>
         </li>
-        <li className="nav__list__item">
-          <NavLink to="/contact" className="nav__list__link" onClick={closeMenu}>
+        <li className="Nav__List__Item">
+          <NavLink to="/contact" className="Nav__List__Link" onClick={closeMenu}>
             Contact
           </NavLink>
         </li>
-        <li className="nav__list__item">
+        <li className="Nav__List__Item">
           {auth ? (
-            <NavLink to="/admin" className="nav__list__link" onClick={closeMenu}>
+            <NavLink to="/admin" className="Nav__List__Link" onClick={closeMenu}>
               Admin
             </NavLink>
           ) : (
-            <NavLink to="/login" className="nav__list__link" onClick={closeMenu}>
+            <NavLink to="/login" className="Nav__List__Link" onClick={closeMenu}>
               Login
             </NavLink>
           )}
         </li>
         {auth ? (
-          <li className="nav__list__item">
-            <button className="logOutButton" onClick={logout}>
+          <li className="Nav__List__Item">
+            <button className="LogOutButton" onClick={logout}>
               Logout
             </button>
           </li>

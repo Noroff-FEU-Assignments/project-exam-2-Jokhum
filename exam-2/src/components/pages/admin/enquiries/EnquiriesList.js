@@ -41,18 +41,18 @@ export default function EnquiriesList() {
     <>
       {showEnquiry ? (
         <>
-          <button className="adminMenu__button" onClick={onClick}>
+          <button className="AdminMenu__Button" onClick={onClick}>
             Close Enquiries
           </button>
-          <ul className="adminMenu__message__list">
+          <ul className="AdminMenu__Message__List">
             {enquiries.map((enquiry) => {
               const name = enquiry.attributes.enquiries.data[0].attributes.name;
               const message = enquiry.attributes.enquiries.data[0].attributes.message;
               return (
-                <li key={enquiry.id} className="adminMenu__message__item">
+                <li key={enquiry.id} className="AdminMenu__Message__Item">
                   <>
-                    <h3 className="adminMenu__message__heading">
-                      Enquiry about <span className="uppercase">"{enquiry.attributes.name}"</span> from <span className="uppercase">{name}</span> -{" "}
+                    <h3 className="AdminMenu__Message__Heading">
+                      Enquiry about <span className="Uppercase">"{enquiry.attributes.name}"</span> from <span className="Uppercase">{name}</span> -{" "}
                       <a href="mailto: {message.attributes.email}">Reply</a>
                     </h3>
 
@@ -64,7 +64,7 @@ export default function EnquiriesList() {
           </ul>
         </>
       ) : (
-        <button className="adminMenu__button" onClick={onClick}>
+        <button className="AdminMenu__Button" onClick={onClick}>
           Show Enquiries
         </button>
       )}

@@ -18,13 +18,13 @@ const ImageCarousel = ({ props }) => {
 
   return (
     <>
-      <div className="details__image__carousel">
-        <FiArrowLeft className="arrow__left" onClick={prevImage} />
-        <FiArrowRight className="arrow__right" onClick={nextImage} />
+      <div className="Details__Image__Carousel">
+        <FiArrowLeft className="Arrow__Left" onClick={prevImage} />
+        <FiArrowRight className="Arrow__Right" onClick={nextImage} />
         {props.map((image, index) => {
           return (
-            <div className={index === current ? "slide active" : "slide"} key={image.id}>
-              {index === current && <img src={image.attributes.url} alt={image.attributes.alternativeText} className="image" />}
+            <div className={index === current ? "Slide Active" : "Slide"} key={image.id}>
+              {index === current && <img src={image.attributes.url} alt={image.attributes.alternativeText} className="Image" />}
             </div>
           );
         })}

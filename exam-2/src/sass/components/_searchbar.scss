@@ -1,10 +1,10 @@
-.search {
+.Search {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
   max-width: 625px;
 
-  &__list {
+  &__List {
     display: none;
     border-top: 1px solid $secondary-color;
     background-color: $primary-color;
@@ -20,22 +20,21 @@
     }
   }
 
-  &__error {
+  &__Error {
     display: none;
     padding: 0.5rem;
-    transition: ease-in 0.6s;
     background-color: $red-color;
     color: $secondary-color;
     text-align: center;
   }
 
-  .fade-in {
+  .FadeIn {
     display: block;
-    animation: fade-in 1s;
+    animation: FadeIn 1s;
   }
 }
 
-@keyframes fade-in {
+@keyframes FadeIn {
   from {
     opacity: 0;
   }

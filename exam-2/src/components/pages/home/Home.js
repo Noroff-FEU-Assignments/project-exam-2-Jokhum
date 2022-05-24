@@ -7,8 +7,8 @@ function Home() {
   return (
     <>
       <Heading title="Welcome to Holidaze!" />
-      <div className="main__container">
-        <img className="main__container__image" src={image} alt="Bergen Brygge"></img>
+      <div className="Main__Container">
+        <img className="Main__Container__Image" src={image} alt="Bergen Brygge"></img>
       </div>
       <p>We are a leading accommodations booking company based in Bergen, Norway and we can make your vacation dreams come through!</p>
       <p>
@@ -16,7 +16,7 @@ function Home() {
         listed below!
       </p>
       <h2>Featured Accommodations</h2>
-      <section className="featured">
+      <section className="Featured">
         <FeaturedList />
       </section>
     </>

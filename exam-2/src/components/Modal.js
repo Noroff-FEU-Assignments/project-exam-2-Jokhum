@@ -53,34 +53,34 @@ export default function Modal({ closeModal, pageTitle, pageId }) {
 
   return (
     <>
-      <div className="modalBackground">
-        <form className="modalForm" onSubmit={handleSubmit(onSubmit)}>
-          <MdClose className="closeModal" onClick={() => closeModal(false)} />
-          <div className="modalForm__title">
+      <div className="ModalBackground">
+        <form className="ModalForm" onSubmit={handleSubmit(onSubmit)}>
+          <MdClose className="CloseModal" onClick={() => closeModal(false)} />
+          <div className="ModalForm__title">
             <h1>Send an enquiry about {pageTitle} below:</h1>
           </div>
-          <div className="modalForm__item">
+          <div className="ModalForm__Item">
             <label htmlFor="name">Name:</label>
             <input {...register("name")} placeholder="Your name here..." />
-            {errors.subject && <span className="error">{errors.subject.message}</span>}
+            {errors.subject && <span className="Error">{errors.subject.message}</span>}
           </div>
-          <div className="modalForm__item">
+          <div className="ModalForm__Item">
             <label htmlFor="email">E-mail:</label>
             <input {...register("email")} placeholder="Your e-mail here..." />
-            {errors.email && <span className="error">{errors.email.message}</span>}
+            {errors.email && <span className="Error">{errors.email.message}</span>}
           </div>
-          <div className="modalForm__item">
+          <div className="ModalForm__Item">
             <label htmlFor="accommodation">Accommodation:</label>
             <input {...register("accommodation")} value={pageTitle} disabled />
-            {errors.accommodation && <span className="error">{errors.accommodation.message}</span>}
+            {errors.accommodation && <span className="Error">{errors.accommodation.message}</span>}
           </div>
-          <div className="modalForm__item">
+          <div className="ModalForm__Item">
             <label htmlFor="message">Message:</label>
             <textarea {...register("message")} placeholder="Your message here..." />
-            {errors.message && <span className="error">{errors.message.message}</span>}
+            {errors.message && <span className="Error">{errors.message.message}</span>}
           </div>
           {serverError && <span className="error">{serverError}</span>}
-          <div className="centered">
+          <div className="Centered">
             <button>{submitting ? "Sending message..." : "Send"}</button>
           </div>
         </form>

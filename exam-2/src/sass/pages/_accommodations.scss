@@ -1,14 +1,14 @@
-.accommodations {
+.Accommodations {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1.5rem;
 
-  .accommodationCard {
+  .AccommodationCard {
     width: 300px;
 
-    &__item__text {
+    &__Item__Text {
       display: flex;
       flex-direction: column;
 
@@ -17,13 +17,13 @@
         margin-top: 1rem;
       }
     }
-    &__item__price {
+    &__Item__Price {
       font-size: 16px;
       margin-top: 0.5rem;
       font-weight: 200;
     }
 
-    &__item__image {
+    &__Item__Image {
       height: 200px;
       width: 100%;
       overflow: hidden;
@@ -38,7 +38,7 @@
       }
     }
 
-    &__item__image img:hover {
+    &__Item__Image img:hover {
       transform: scale(1.1);
     }
   }

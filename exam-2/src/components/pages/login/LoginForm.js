@@ -48,19 +48,19 @@ export default function LoginForm() {
 
   return (
     <>
-      <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
+      <form className="LoginForm" onSubmit={handleSubmit(onSubmit)}>
         {loginError && <span className="error">{loginError}</span>}
-        <h2 className="loginForm__title">Enter your credentials below:</h2>
-        <div className="loginForm__item">
+        <h2 className="LoginForm__Title">Enter your credentials below:</h2>
+        <div className="LoginForm__Item">
           <input name="identifier" placeholder="Username" {...register("identifier")} />
-          {errors.username && <span className="error">{errors.username.message}</span>}
+          {errors.username && <span className="Error">{errors.username.message}</span>}
         </div>
 
-        <div className="loginForm__item">
+        <div className="LoginForm__Item">
           <input name="password" placeholder="Password" {...register("password")} type="password" />
-          {errors.password && <span className="error">{errors.password.message}</span>}
+          {errors.password && <span className="Error">{errors.password.message}</span>}
         </div>
-        <div className="centered">
+        <div className="Centered">
           <button>{submitting ? "Logging in..." : "Login"}</button>
         </div>
       </form>

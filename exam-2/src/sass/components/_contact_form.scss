@@ -1,0 +1,13 @@
+.ContactForm {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 2px solid $primary-color;
+  padding: 1rem;
+
+  &__Item {
+    display: flex;
+    flex-direction: column;
+  }
+}

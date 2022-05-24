@@ -1,4 +1,4 @@
-.details__image__carousel {
+.Details__Image__Carousel {
   margin: 1rem auto;
   display: flex;
   flex-direction: row;
@@ -8,18 +8,18 @@
 
   position: relative;
 
-  .image {
+  .Image {
     width: 600px;
     height: fit-content;
     box-shadow: 2px 2px 10px #000;
   }
 
-  .slide {
+  .Slide {
     opacity: 0;
     transition-duration: 2s;
   }
 
-  .slide.active {
+  .Slide.Active {
     opacity: 1;
     transition-duration: 2s;
     height: 600px;
@@ -36,13 +36,13 @@
     }
   }
 
-  .arrow__right,
-  .arrow__left {
+  .Arrow__Right,
+  .Arrow__Left {
     position: absolute;
     top: 50%;
     height: 50px;
     font-size: 2rem;
-    z-index: 99;
+    z-index: 1;
     color: $primary-color;
     user-select: none;
     background-color: rgba(255, 255, 255, 0.651);
@@ -52,12 +52,12 @@
     }
   }
 
-  .arrow__right {
+  .Arrow__Right {
     right: 0;
     border-radius: 5px 0 0 5px;
   }
 
-  .arrow__left {
+  .Arrow__Left {
     left: 0;
     border-radius: 0 5px 5px 0;
   }

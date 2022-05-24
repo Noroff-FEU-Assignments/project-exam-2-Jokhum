@@ -61,39 +61,39 @@ export default function AddEstablishment() {
 
   return (
     <>
-      <form className="establishmentForm" onSubmit={handleSubmit(onSubmit)}>
-        {serverError && <span className="error">{serverError}</span>}
-        <h2 className="establishmentForm__title">Add establishment:</h2>
-        <div className="loginForm__item">
+      <form className="EstablishmentForm" onSubmit={handleSubmit(onSubmit)}>
+        {serverError && <span className="Error">{serverError}</span>}
+        <h2 className="EstablishmentForm__Title">Add establishment:</h2>
+        <div className="EstablishmentForm__Item">
           <input name="name" placeholder="Name..." {...register("name")} />
-          {errors.name && <span className="error">{errors.name.message}</span>}
+          {errors.name && <span className="Error">{errors.name.message}</span>}
         </div>
-        <div className="establishmentForm__item">
+        <div className="EstablishmentForm__Item">
           <input name="type" placeholder="Type..." {...register("type")} />
-          {errors.type && <span className="error">{errors.type.message}</span>}
+          {errors.type && <span className="Error">{errors.type.message}</span>}
         </div>
-        <div className="establishmentForm__item">
+        <div className="EstablishmentForm__Item">
           <input name="location" placeholder="Location..." {...register("location")} />
-          {errors.location && <span className="error">{errors.location.message}</span>}
+          {errors.location && <span className="Error">{errors.location.message}</span>}
         </div>
-        <div className="establishmentForm__item">
+        <div className="EstablishmentForm__Item">
           <input name="price" placeholder="Price..." {...register("price")} />
-          {errors.price && <span className="error">{errors.price.message}</span>}
+          {errors.price && <span className="Error">{errors.price.message}</span>}
         </div>
-        <div className="establishmentForm__item">
+        <div className="EstablishmentForm__Item">
           <textarea name="description" placeholder="Description..." {...register("description")} />
-          {errors.description && <span className="error">{errors.description.message}</span>}
+          {errors.description && <span className="Error">{errors.description.message}</span>}
         </div>
-        <div className="establishmentForm__item">
+        <div className="EstablishmentForm__item">
           <MediaSelection register={register} />
-          {errors.select && <span className="error">{errors.select.message}</span>}
+          {errors.select && <span className="Error">{errors.select.message}</span>}
         </div>
-        <div className="column">
+        <div className="Column">
           <label htmlFor="checkbox">Featured:</label>
-          <input type="checkbox" className="loginForm__checkbox" {...register("featured")}></input>
+          <input type="checkbox" className="LoginForm__checkbox" {...register("featured")}></input>
         </div>
-        {success ? <span className="success">Your establishment has been created!</span> : null}
-        <div className="centered">
+        {success ? <span className="Success">Your establishment has been created!</span> : null}
+        <div className="Centered">
           <button>{submitting ? "Adding establishment" : "Add"}</button>
         </div>
       </form>

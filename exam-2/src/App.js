@@ -36,7 +36,7 @@ function App() {
     <AuthProvider>
       <div className="App">
         <NavBar />
-        <div className="wrapper">
+        <div className="Wrapper">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
@@ -46,8 +46,8 @@ function App() {
             <Route path="admin" element={<Admin />} />
           </Routes>
           {backTop && (
-            <div className="back__up__container">
-              <ImArrowUp id="back__top" onClick={scrollToTop} />
+            <div className="Back__Up__Container">
+              <ImArrowUp id="Back__Top" onClick={scrollToTop} />
             </div>
           )}
         </div>
