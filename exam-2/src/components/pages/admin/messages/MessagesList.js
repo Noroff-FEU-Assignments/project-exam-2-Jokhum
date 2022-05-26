@@ -5,6 +5,7 @@ import api from "../../../../constants/api";
 export default function MessagesList() {
   const [messages, setMessages] = useState([]);
   const [showMessage, setShowMessage] = useState(false);
+  const button = document.getElementById("messageBtn");
 
   const http = useAxios();
 
@@ -18,9 +19,7 @@ export default function MessagesList() {
         const response = await http.get(url);
         setMessages(response.data.data);
       } catch (error) {
-        // setError(error.toString());
-      } finally {
-        // setLoading(false);
+        console.log(error);
       }
     }
     fetchMessages();
@@ -30,9 +29,15 @@ export default function MessagesList() {
     <>
       {showMessage ? (
         <>
-          <button className="AdminMenu__Button" onClick={onClick}>
-            Close Messages
-          </button>
+          {messages.length === 0 ? (
+            <button style={{ backgroundColor: "#a40d0d" }} onClick={onClick}>
+              No new messages!
+            </button>
+          ) : (
+            <button className="AdminMenu__Button" id="messageBtn" onClick={onClick}>
+              Close Messages
+            </button>
+          )}
           <ul className="AdminMenu__Message__List">
             {messages.map((message) => {
               return (
@@ -42,7 +47,6 @@ export default function MessagesList() {
                       <span className="Uppercase">"{message.attributes.subject}"</span> from <span className="Uppercase">{message.attributes.name}</span> -{" "}
                       <a href="mailto: {message.attributes.email}">Reply</a>
                     </h3>
-
                     <p>{message.attributes.message}</p>
                   </>
                 </li>
@@ -51,7 +55,7 @@ export default function MessagesList() {
           </ul>
         </>
       ) : (
-        <button className="AdminMenu__Button" onClick={onClick}>
+        <button className="AdminMenu__Button" id="messageBtn" onClick={onClick}>
           Show Messages
         </button>
       )}

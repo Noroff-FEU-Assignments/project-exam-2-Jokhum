@@ -5,6 +5,7 @@ import api from "../../../../constants/api";
 export default function EnquiriesList() {
   const [enquiries, setEnquiries] = useState([]);
   const [showEnquiry, setShowEnquiry] = useState(false);
+  const button = document.getElementById("EnquiryBtn");
 
   const http = useAxios();
 
@@ -26,12 +27,11 @@ export default function EnquiriesList() {
           } else {
             return null;
           }
+
           return setEnquiries(tempArray);
         });
       } catch (error) {
-        // setError(error.toString());
-      } finally {
-        // setLoading(false);
+        console.log(error);
       }
     }
     fetchEnquiries();
@@ -41,9 +41,15 @@ export default function EnquiriesList() {
     <>
       {showEnquiry ? (
         <>
-          <button className="AdminMenu__Button" onClick={onClick}>
-            Close Enquiries
-          </button>
+          {enquiries.length >= 1 ? (
+            <button className="AdminMenu__Button" onClick={onClick}>
+              Close Enquiries
+            </button>
+          ) : (
+            <button className="AdminMenu__Button" style={{ backgroundColor: "#a40d0d" }} onClick={onClick}>
+              No new enquiries!
+            </button>
+          )}
           <ul className="AdminMenu__Message__List">
             {enquiries.map((enquiry) => {
               const name = enquiry.attributes.enquiries.data[0].attributes.name;

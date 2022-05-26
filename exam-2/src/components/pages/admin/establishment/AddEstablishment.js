@@ -31,9 +31,13 @@ export default function AddEstablishment() {
   });
 
   async function onSubmit(data) {
-    const form = document.querySelector(".establishmentForm");
+    const form = document.querySelector(".EstablishmentForm");
     setSubmitting(true);
     setServerError(null);
+
+    if (data.image === "") {
+      data.image = null;
+    }
 
     const options = {
       method: "POST",
@@ -47,6 +51,7 @@ export default function AddEstablishment() {
     try {
       const response = await fetch(url, options);
       const json = await response.json();
+
       if (json) {
         setSuccess(true);
         form.reset();

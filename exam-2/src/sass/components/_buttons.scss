@@ -37,7 +37,7 @@ button {
   }
 }
 
-.Back__Up__Container {
+.Back__Top__Container {
   position: fixed;
   width: 60px;
   right: 1rem;
@@ -48,13 +48,15 @@ button {
   align-items: center;
   background-color: rgba(0, 64, 94, 0.705);
   border-radius: 5px;
+  z-index: 3;
 
-  #Back__Top {
+  #__Item {
     margin: 0 1rem;
     font-size: 25px;
     color: $secondary-color;
-    &:hover {
-      cursor: pointer;
-    }
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

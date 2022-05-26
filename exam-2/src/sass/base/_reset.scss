@@ -4,8 +4,20 @@
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 img {
   border: 1px solid $primary-color;
+}
+
+svg {
+  color: $secondary-color;
 }
 
 .Centered {
@@ -33,12 +45,4 @@ img {
     margin: 0 20%;
     margin-bottom: 4rem;
   }
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
 }

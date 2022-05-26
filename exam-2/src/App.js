@@ -46,8 +46,8 @@ function App() {
             <Route path="admin" element={<Admin />} />
           </Routes>
           {backTop && (
-            <div className="Back__Up__Container">
-              <ImArrowUp id="Back__Top" onClick={scrollToTop} />
+            <div className="Back__Top__Container">
+              <ImArrowUp id="Back__Top__Container__Item" onClick={scrollToTop} />
             </div>
           )}
         </div>

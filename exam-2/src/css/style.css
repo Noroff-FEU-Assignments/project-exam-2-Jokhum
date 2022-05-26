@@ -5,8 +5,20 @@
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 img {
   border: 1px solid #00415e;
+}
+
+svg {
+  color: #ffffff;
 }
 
 .Centered {
@@ -50,14 +62,6 @@ img {
     margin: 0 20%;
     margin-bottom: 4rem;
   }
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 body {
@@ -311,9 +315,6 @@ p {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   gap: 1.5rem;
 }
 
@@ -614,7 +615,7 @@ button:hover {
   }
 }
 
-.Back__Up__Container {
+.Back__Top__Container {
   position: fixed;
   width: 60px;
   right: 1rem;
@@ -631,15 +632,16 @@ button:hover {
           align-items: center;
   background-color: rgba(0, 64, 94, 0.705);
   border-radius: 5px;
+  z-index: 3;
 }
 
-.Back__Up__Container #Back__Top {
+.Back__Top__Container #__Item {
   margin: 0 1rem;
   font-size: 25px;
   color: #ffffff;
 }
 
-.Back__Up__Container #Back__Top:hover {
+.Back__Top__Container:hover {
   cursor: pointer;
 }
 
@@ -655,7 +657,6 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  min-height: 1000px;
 }
 
 .Details h1 {
@@ -875,7 +876,7 @@ button:hover {
 }
 
 .ModalBackground {
-  min-height: 1000px;
+  min-height: 1200px;
   width: 100%;
   background-color: #ffffff;
   position: absolute;
@@ -886,6 +887,9 @@ button:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 40px;
   z-index: 2;
 }

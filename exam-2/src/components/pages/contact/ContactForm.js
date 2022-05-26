@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import api from "../../../constants/api";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
   name: yup.string().required("Please enter your name.").min(3, "The name must be at least 3 characters!"),
@@ -15,7 +16,7 @@ export default function ContactForm() {
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState(null);
-  const form = document.querySelector(".contactForm");
+  const history = useNavigate();
 
   const {
     register,
@@ -35,12 +36,9 @@ export default function ContactForm() {
       },
     };
 
-    console.log(data);
-    console.log(options);
     try {
       const response = await fetch(url, options);
-      const json = await response.json();
-      console.log("response", json);
+
       if (response) {
         setSuccess(true);
       }
@@ -48,6 +46,7 @@ export default function ContactForm() {
       console.log("error", error);
       setServerError(error.toString());
     } finally {
+      const form = document.querySelector("form");
       setSubmitting(false);
       form.reset();
     }
