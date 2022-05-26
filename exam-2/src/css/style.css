@@ -219,14 +219,14 @@ p {
   font-size: 24px;
 }
 
-.Nav__List__Link.Active {
+.Nav__List__Link.active {
   color: #00415e;
   background-color: #ffffff;
   padding: 1rem;
 }
 
 @media (min-width: 1000px) {
-  .Nav__List__Link.Active {
+  .Nav__List__Link.active {
     border-radius: 5px;
   }
 }

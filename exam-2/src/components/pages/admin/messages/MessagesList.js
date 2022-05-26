@@ -5,7 +5,6 @@ import api from "../../../../constants/api";
 export default function MessagesList() {
   const [messages, setMessages] = useState([]);
   const [showMessage, setShowMessage] = useState(false);
-  const button = document.getElementById("messageBtn");
 
   const http = useAxios();
 

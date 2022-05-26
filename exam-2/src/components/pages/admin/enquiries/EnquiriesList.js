@@ -5,7 +5,6 @@ import api from "../../../../constants/api";
 export default function EnquiriesList() {
   const [enquiries, setEnquiries] = useState([]);
   const [showEnquiry, setShowEnquiry] = useState(false);
-  const button = document.getElementById("EnquiryBtn");
 
   const http = useAxios();
 
